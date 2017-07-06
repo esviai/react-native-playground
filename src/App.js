@@ -1,17 +1,21 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import { StackNavigator } from 'react-navigation'
 
 import Journals from './components/Journals'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Journals />
-      </View>
-    );
-  }
-}
+export default App = StackNavigator({
+  Home: { screen: Journals },
+})
+
+
+//export default class App extends React.Component {
+//  render() {
+//    return (
+//      <Journals />
+//    )
+//  }
+//}
 
 const styles = StyleSheet.create({
   container: {
@@ -20,4 +24,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
